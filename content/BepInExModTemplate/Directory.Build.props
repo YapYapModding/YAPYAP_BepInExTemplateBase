@@ -75,7 +75,7 @@
     <PathBeforeSteam Condition="'$([MSBuild]::IsOSUnixLike())' != 'true'">$(MSBuildProgramFiles32)/</PathBeforeSteam>
     <YAPYAPGameRootDir Condition="$(YAPYAPGameRootDir) == ''">$(PathBeforeSteam)Steam/steamapps/common/YAPYAP/</YAPYAPGameRootDir>
     <YAPYAPPluginsDir Condition="$(YAPYAPPluginsDir) == ''">$(YAPYAPGameRootDir)/BepInEx/plugins/</YAPYAPPluginsDir>
-    <ManagedDir>$(YAPYAPGameRootDir)/YAPYAP_Data/Managed/</ManagedDir>
+    <ManagedDir>$(YAPYAPGameRootDir)/yapyap_Data/Managed/</ManagedDir>
   </PropertyGroup>
 
 </Project>
