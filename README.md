@@ -22,7 +22,7 @@
 Run the following command:
 
 ```bash
-dotnet new install darmuh.BepInExTemplate
+dotnet new install YAPYAP.BepInExTemplate
 ```
 
 > [!TIP]  
