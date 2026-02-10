@@ -12,6 +12,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.windows10ce.com/nuget/v3/index.json
     </RestoreAdditionalProjectSources>
+    <PublicizerRuntimeStrategies>unsafe</PublicizerRuntimeStrategies>
   </PropertyGroup>
 
   <!-- Build dependencies -->
@@ -27,8 +28,10 @@
     -->
     <!--#endif -->
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
-    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3"
-      PrivateAssets="all" />
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Hamunii.BepInEx.AutoPlugin" Version="2.0.*" PrivateAssets="all" />
     <!--#if
     (!no-tutorial) -->
@@ -71,7 +74,12 @@
       Learn more at: https://github.com/BepInEx/BepInEx.AssemblyPublicizer
     -->
     <!--#endif -->
-    <Reference Include="$(ManagedDir)Assembly-CSharp.dll" Private="false" Publicize="true" />
+    <!--
+      This can be modified to not publicize virtual members for inheritance
+      on a class by class basis or by including `IncludeVirtualMembers="false"`
+      below
+    -->
+    <Publicize Include="Assembly-CSharp" IncludeCompilerGeneratedMembers="false" />
   </ItemGroup>
 
   <!--
