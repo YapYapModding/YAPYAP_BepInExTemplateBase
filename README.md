@@ -1,6 +1,6 @@
 # BepInEx Template for YAPYAP
 
-- [BepInEx Template for YAPYAP](#bepinex-template-for-gamename)
+- [BepInEx Template for YAPYAP](#bepinex-template-for-yapyap)
   - [Installing](#installing)
     - [From NuGet (Recommended)](#from-nuget-recommended)
     - [Manually](#manually)
@@ -93,7 +93,7 @@ The template "YAPYAP BepInEx Plugin" was created successfully.
 ├── Directory.Build.targets
 ├── icon.png
 ├── LICENSE
-├── MyCoolMod.sln
+├── MyCoolMod.slnx
 ├── README.md
 └── src
     └── MyCoolMod
